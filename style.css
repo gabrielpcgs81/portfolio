@@ -1,0 +1,81 @@
+@font-face {
+    font-family: robtronika;
+    src: url('Robtronika-Regular.ttf');
+  }
+
+@font-face {
+    font-family: cactee;
+    src: url('Cactee-Regular.ttf');
+  }
+
+body{
+    margin:0px;
+    padding:0px;
+}
+
+#pagetop{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height:80px;
+    width: 100%;
+    padding-left:25px;
+    padding-right: 25px;
+    background-color: rgb(20, 20, 20);
+}
+
+#pagetop > span {
+    font-family: cactee;
+    color:rgb(200,0,0);
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+#pagetop > ol > li{
+    align-self: center;
+    float: left;
+    color: white;
+}
+
+#intro{
+    height: 900px;
+    background-image: url('ironman3.jpg');
+    background-size: 100%;
+    color: red;
+}
+
+#sayings {
+    justify-content:center;
+    height: 900px;
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#sayings > h1{
+    text-align: right;
+    width: 400px;
+    font-family: robtronika;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#sayings > p{
+    text-align: right;
+    width: 400px;
+    font-family: robtronika;
+    font-size: small;
+    font-weight: bold;
+}
+
+#sayings > p > span{
+    background:linear-gradient(to right,rgb(30, 50, 230) , rgb(0, 140, 20) , rgb(254,223,0) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: right;
+    width: 400px;
+    font-family: robtronika;
+    font-size: small;
+    font-weight: bold;
+}
