@@ -1,11 +1,11 @@
 @font-face {
     font-family: robtronika;
-    src: url('Robtronika-Regular.ttf');
+    src: url('fonts/Robtronika-Regular.ttf');
   }
 
 @font-face {
     font-family: cactee;
-    src: url('Cactee-Regular.ttf');
+    src: url('fonts/Cactee-Regular.ttf');
   }
 
 body{
@@ -31,15 +31,42 @@ body{
     font-weight: bolder;
 }
 
-#pagetop > ol > li{
-    align-self: center;
-    float: left;
-    color: white;
+ol {
+    list-style: none;
+    counter-reset: ordered-list;
 }
 
+ol li {
+    counter-increment: ordered-list;
+}
+
+ol li::before {
+    content: counter(ordered-list) ". ";
+    color: red;
+    font-weight: bolder;
+}
+
+#pagetop > ol {
+    margin-right: 75px;
+    display: flex;
+    width: 25%;
+    color: white;
+    font-size: large;
+    justify-content: space-between;
+}
+
+#pagetop > ol > li:hover{
+    font-weight: bolder;
+    color: rgb(200,0,0);;
+}
+
+
+.menu_item{
+    display:inline;
+}
 #intro{
     height: 900px;
-    background-image: url('ironman3.jpg');
+    background-image: url('imagens/ironman3.jpg');
     background-size: 100%;
     color: red;
 }
@@ -78,4 +105,46 @@ body{
     font-family: robtronika;
     font-size: small;
     font-weight: bold;
+}
+
+#sayings > nav > a {
+    align-self: center;
+    justify-self: center;
+    margin: 0px 10px;
+}
+
+.social_networks:hover{
+    color:white;
+    -webkit-transform:scale(1.4); 
+    -moz-transform:scale(1.4); 
+    -o-transform:scale(1.4);
+    transform:scale(1.4);
+}
+
+.social_networks{
+    color:red;
+}
+
+.whoami_card{
+    display:flex;
+    flex-direction: row;
+    color: white;
+    background-color: rgb(40, 40, 40);
+    height:80%;
+    width: 100%;
+}
+
+.left {
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 100%);
+}
+
+.whoami_card > p, .whoami_card>img{
+    background-color: black;
+    width:  calc(100% / 3);
+    margin:0px;
+    padding: 0px;
+}
+
+.right {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 100%);
 }
