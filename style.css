@@ -121,9 +121,22 @@ ol li::before {
     transform:scale(1.4);
 }
 
+#intro > sidebar {
+    background-color: rgba(20, 20, 20,.25) ;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    margin-bottom:40px;
+    position: fixed;
+    height:100%;
+    width: 4%;
+    z-index:+2;
+}
 .social_networks{
     /*position: fixed;*/
     color:red;
+    padding: 10px;
 }
 
 .whoami_card{
